@@ -1,0 +1,8 @@
+steps:
+  - name: maven:3-jdk-11
+    entrypoint: mvn
+    args: ['package','-Dmaven.test.skip=true']
+  - name: gcr.io/cloud-builders/docker
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/servlet-cloud-un/servlet/servletcloudrun','--build-arg=JAR_FILE=target/ServletCloudRun-jar-with-dependencies.jar','.']
+images:
+  - us-central1-docker.pkg.dev/servlet-cloud-un/servlet/servletcloudrun

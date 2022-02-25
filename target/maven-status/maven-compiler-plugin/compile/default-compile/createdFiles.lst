@@ -1,0 +1,5 @@
+org\alma\servletcloudrun\model\Body.class
+org\alma\servletcloudrun\model\Data.class
+org\alma\servletcloudrun\ServletApplication.class
+org\alma\servletcloudrun\model\Body$Message.class
+org\alma\servletcloudrun\PubSubServlet.class
